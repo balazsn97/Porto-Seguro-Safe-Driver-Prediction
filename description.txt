@@ -1,0 +1,7 @@
+After dealing with EDA and missing data I used a fraction of the training data for validation (with stratify, so proportions of target data remained the same).
+Tried different sampling methods, SMOTE, SMOTE with Tomek links, cluster centroids, SMOTEnc for categorical data and ADASYN. 
+Oversampling with SMOTE had the best results - i tested them with an untuned random forest classifier.
+
+Regardless of the sampling methods, every model was producing massive overfits, when I tried running models on the entire training data, their performance greatly decreased.
+I tried gradient boosting/xgboost/random forest classifier optimized for normalized gini, the random forest was performing best.
+
